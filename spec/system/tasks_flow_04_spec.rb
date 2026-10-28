@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe "タスク操作（ブラウザ）", type: :system do
-  100.times do |i|
+RSpec.describe "タスク操作（ブラウザ）04", type: :system do
+  (30...40).each do |i|
     it "タスク #{i} を作成して一覧で確認し、完了にして削除できる" do
       visit new_task_path
       fill_in "Title", with: "ブラウザタスク #{i}"

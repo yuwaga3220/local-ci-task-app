@@ -78,8 +78,11 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Prepare database
-        run: bin/rails db:test:prepare
+      - name: Show CPU count
+        run: nproc
 
-      - name: Run RSpec
-        run: bundle exec rspec
+      - name: Prepare databases for parallel tests
+        run: bin/rails parallel:setup
+
+      - name: Run RSpec in parallel
+        run: bundle exec parallel_rspec spec

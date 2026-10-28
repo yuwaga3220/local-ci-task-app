@@ -43,6 +43,9 @@ group :development, :test do
   # System tests (browser)
   gem "capybara"
   gem "selenium-webdriver"
+
+  # Run specs in parallel processes
+  gem "parallel_tests"
 end
 
 group :development do
