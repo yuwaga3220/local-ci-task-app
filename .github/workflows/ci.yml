@@ -83,3 +83,9 @@ jobs:
 
       - name: Run RSpec
         run: bundle exec rspec
+
+  # シナリオ 8 用: 何も検証しない、signoff という名前のジョブ
+  signoff:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "nothing is tested here"
