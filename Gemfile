@@ -39,6 +39,10 @@ group :development, :test do
 
   # Testing framework
   gem "rspec-rails"
+
+  # System tests (browser)
+  gem "capybara"
+  gem "selenium-webdriver"
 end
 
 group :development do
