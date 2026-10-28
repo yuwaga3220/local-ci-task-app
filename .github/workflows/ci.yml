@@ -83,3 +83,10 @@ jobs:
 
       - name: Run RSpec
         run: bundle exec rspec
+
+  # シナリオ 9 用: 常にスキップされる、signoff という名前のジョブ
+  signoff:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "never runs"
